@@ -71,6 +71,14 @@ export function Header() {
           Status <Icon name="external" size={14} />
         </a>
       </div>
+      <a
+        className="nav-status mobile-nav-status"
+        href="https://status.tunaa.io.vn"
+        target="_blank"
+        rel="noreferrer"
+      >
+        Status <Icon name="external" size={14} />
+      </a>
     </nav>
   )
 }

@@ -80,7 +80,8 @@
   }
 }
 
-.nav-status {
+.nav-status,
+.mobile-nav-status {
   display: inline-flex;
   align-items: center;
   gap: 6px;
@@ -94,7 +95,8 @@
     padding $transition-fast;
 }
 
-.nav-status {
+.nav-status,
+.mobile-nav-status {
   padding: 7px 11px;
   border: 1px solid rgba($color-green, 0.55);
   border-radius: 999px;
@@ -108,6 +110,10 @@
     box-shadow: 0 0 24px rgba($color-green, 0.3);
     color: #8af1c7;
   }
+}
+
+.mobile-nav-status {
+  display: none;
 }
 
 .nav-cta,

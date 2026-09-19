@@ -32,8 +32,6 @@ jobs:
 
       - name: Build
         run: npm run build
-        env:
-          VITE_BASE_PATH: ${{ vars.CUSTOM_DOMAIN == 'true' && '/' || format('/{0}/', github.event.repository.name) }}
 
       - name: Preserve custom domain
         run: if [ -f CNAME ]; then cp CNAME dist/CNAME; fi

@@ -84,13 +84,12 @@ npm run preview   # Preview the production build locally
 
 ## Base Path Configuration
 
-Set `VITE_BASE_PATH` when the application is hosted below the domain root:
+Set the `baseUrl` value in `vite.config.js` to match where the site is served:
 
-```bash
-VITE_BASE_PATH=/portfolio/ npm run build
-```
+- Custom domain: `/`
+- GitHub Pages project site: `/<project-name>/`, for example `/Portfolio/`
 
-The default base path is `/`.
+The deployment workflow does not choose this value automatically. Update `baseUrl` before deploying when switching between these hosting modes.
 
 ## GitHub Pages Deployment
 

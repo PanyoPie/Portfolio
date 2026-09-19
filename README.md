@@ -92,6 +92,18 @@ VITE_BASE_PATH=/portfolio/ npm run build
 
 The default base path is `/`.
 
+## GitHub Pages Deployment
+
+The repository includes a GitHub Actions workflow at `.github/workflows/deploy-pages.yml`.
+Every push to `master` builds the Vite application with the `/Portfolio/` base path and deploys `dist/` to GitHub Pages.
+
+To enable deployment in GitHub:
+
+1. Open the repository's **Settings**.
+2. Select **Pages** under **Code, planning and automation**.
+3. Set **Source** to **GitHub Actions**.
+4. Push to `master` or run the **Deploy to GitHub Pages** workflow manually from the **Actions** tab.
+
 ## Docker Setup
 
 Build the production image:

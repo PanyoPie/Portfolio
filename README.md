@@ -95,7 +95,16 @@ The default base path is `/`.
 ## GitHub Pages Deployment
 
 The repository includes a GitHub Actions workflow at `.github/workflows/deploy-pages.yml`.
-Every push to `master` builds the Vite application with the `/Portfolio/` base path and deploys `dist/` to GitHub Pages.
+Every push to `master` builds the Vite application and deploys `dist/` to GitHub Pages.
+
+- Without a custom domain, assets use the repository path: `/Portfolio/`.
+- With a custom domain, assets use the domain root: `/`.
+
+The workflow detects a custom-domain deployment through a tracked `CNAME` file. Add your domain to `CNAME` on its own line to use the root path:
+
+```text
+tunaa.io.vn
+```
 
 To enable deployment in GitHub:
 

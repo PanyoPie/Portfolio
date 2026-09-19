@@ -33,7 +33,10 @@ jobs:
       - name: Build
         run: npm run build
         env:
-          VITE_BASE_PATH: /${{ github.event.repository.name }}/
+          VITE_BASE_PATH: ${{ hashFiles('CNAME') != '' && '/' || format('/{0}/', github.event.repository.name) }}
+
+      - name: Preserve custom domain
+        run: if [ -f CNAME ]; then cp CNAME dist/CNAME; fi
 
       - name: Configure Pages
         uses: actions/configure-pages@v5

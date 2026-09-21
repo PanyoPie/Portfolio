@@ -1,6 +1,9 @@
 # Tunaa's Portfolio
 
-A personal developer portfolio for myself. It showcases selected projects, online platforms, contact links, and a live Discord presence panel with realtime activity, Spotify metadata, and activity artwork when available.
+My personal developer portfolio. It showcases selected projects, online platforms, contact links, and a live Discord presence panel with realtime activity, Spotify metadata, and activity artwork when available.
+
+## Wanna see it live?
+- Come check it out at my courtyard: [tunaa.io.vn](https://tunaa.io.vn)
 
 ## Features
 

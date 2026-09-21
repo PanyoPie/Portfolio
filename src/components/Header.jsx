@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 import { Icon } from './Icon'
+import { handleSectionLinkClick } from './SectionLink'
 
 export function Header() {
   const [isLinksFloating, setIsLinksFloating] = useState(false)
@@ -44,22 +45,22 @@ export function Header() {
 
   return (
     <nav className="nav container" aria-label="Main navigation">
-      <a className="brand" href="#home" aria-label="Tunaa home">
+      <a className="brand" href="#home" onClick={(event) => handleSectionLinkClick(event, 'home')} aria-label="Tunaa home">
         <span>
           tunaa<span className="brand-dot">.</span>io<span className="brand-dot">.</span>vn
         </span>
       </a>
       <div className={`nav-links${isLinksFloating ? ' nav-links-floating' : ''}`}>
-        <a className={activeSection === 'about' ? 'active' : ''} href="#about" aria-current={activeSection === 'about' ? 'page' : undefined}>
+        <a className={activeSection === 'about' ? 'active' : ''} href="#about" onClick={(event) => handleSectionLinkClick(event, 'about')} aria-current={activeSection === 'about' ? 'page' : undefined}>
           About
         </a>
-        <a className={activeSection === 'work' ? 'active' : ''} href="#work" aria-current={activeSection === 'work' ? 'page' : undefined}>
+        <a className={activeSection === 'work' ? 'active' : ''} href="#work" onClick={(event) => handleSectionLinkClick(event, 'work')} aria-current={activeSection === 'work' ? 'page' : undefined}>
           Work
         </a>
-        <a className={activeSection === 'sites' ? 'active' : ''} href="#sites" aria-current={activeSection === 'sites' ? 'page' : undefined}>
+        <a className={activeSection === 'sites' ? 'active' : ''} href="#sites" onClick={(event) => handleSectionLinkClick(event, 'sites')} aria-current={activeSection === 'sites' ? 'page' : undefined}>
           Sites
         </a>
-        <a className={activeSection === 'contact' ? 'active' : ''} href="#contact" aria-current={activeSection === 'contact' ? 'page' : undefined}>
+        <a className={activeSection === 'contact' ? 'active' : ''} href="#contact" onClick={(event) => handleSectionLinkClick(event, 'contact')} aria-current={activeSection === 'contact' ? 'page' : undefined}>
           Contact
         </a>
         <a

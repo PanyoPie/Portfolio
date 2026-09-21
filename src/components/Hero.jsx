@@ -1,4 +1,5 @@
 import { Icon } from './Icon'
+import { handleSectionLinkClick } from './SectionLink'
 import { connections } from '../data/connections'
 
 export function Hero() {
@@ -31,10 +32,10 @@ export function Hero() {
           ))}
         </div>
         <div className="hero-actions">
-          <a className="button button-primary" href="#work">
+          <a className="button button-primary" href="#work" onClick={(event) => handleSectionLinkClick(event, 'work')}>
             See my work <Icon name="arrow" size={16} />
           </a>
-          <a className="text-link" href="#contact">
+          <a className="text-link" href="#contact" onClick={(event) => handleSectionLinkClick(event, 'contact')}>
             Get in touch <Icon name="arrow" size={15} />
           </a>
         </div>

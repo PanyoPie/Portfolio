@@ -7,7 +7,7 @@ export function Hero() {
     <section className="hero container" id="about">
       <div className="hero-copy">
         <p className="eyebrow">
-          <span className="status-dot" /> (Always) Available for a epic game of Valorant
+          <span className="status-dot" /> (Always) Available for an epic game of Valorant
         </p>
         <h1>
           Hi, I'm

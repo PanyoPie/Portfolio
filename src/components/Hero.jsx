@@ -1,14 +1,60 @@
+import { useState } from 'react'
 import { Icon } from './Icon'
 import { handleSectionLinkClick } from './SectionLink'
 import { connections } from '../data/connections'
 
+const agentPortraits = [
+  'Astra',
+  'Breach',
+  'Brimstone',
+  'Chamber',
+  'Clove',
+  'Cypher',
+  'Deadlock',
+  'Fade',
+  'Gekko',
+  'Harbor',
+  'Hush',
+  'Iso',
+  'Jett',
+  'KAYO',
+  'Killjoy',
+  'Miks',
+  'Neon',
+  'Omen',
+  'Phoenix',
+  'Raze',
+  'Reyna',
+  'Sage',
+  'Skye',
+  'Sova',
+  'Tejo',
+  'Veto',
+  'Viper',
+  'Vyse',
+  'Waylay',
+  'Yoru',
+]
+
 export function Hero() {
+  // const [agent] = useState(() => agentPortraits[Math.floor(Math.random() * agentPortraits.length)])
+  let agent = "Hush"
+  const [tilt, setTilt] = useState({ x: 0, y: 0 })
+
+  function handleAgentMove(event) {
+    const bounds = event.currentTarget.getBoundingClientRect()
+    const x = (event.clientY - bounds.top) / bounds.height - 0.5
+    const y = (event.clientX - bounds.left) / bounds.width - 0.5
+
+    setTilt({
+      x: x * -20,
+      y: y * 20,
+    })
+  }
+
   return (
     <section className="hero container" id="about">
       <div className="hero-copy">
-        <p className="eyebrow">
-          <span className="status-dot" /> (Always) Available for a epic game of Valorant
-        </p>
         <h1>
           Hi, I'm
           <br />
@@ -40,37 +86,15 @@ export function Hero() {
           </a>
         </div>
       </div>
-      <div className="hero-terminal" aria-label="A terminal-style introduction">
-        <div className="terminal-top">
-          <span className="terminal-dots">
-            <i />
-            <i />
-            <i />
-          </span>
-          <span>tunaa@portfolio: ~</span>
-          <span className="terminal-lock">
-            <Icon name="lock" size={13} />
-          </span>
-        </div>
-        <div className="terminal-body">
-          <p>
-            <span className="prompt">$</span> whoami
-          </p>
-          <p className="terminal-output">tunaa - developer / student</p>
-          <p>
-            <span className="prompt">$</span> currently
-          </p>
-          <p className="terminal-output">
-            learning something...
-            <br />
-            (probably Fade's lineups)
-          </p>
-          <p>
-            <span className="prompt">$</span> help<span className="cursor">_</span>
-          </p>
-          <div className="terminal-rule" />
-          <p className="terminal-comment">// make it work. make it clear.</p>
-        </div>
+      <div
+        className="hero-agent"
+        aria-label={`VALORANT agent: ${agent}`}
+        onMouseMove={handleAgentMove}
+        onMouseLeave={() => setTilt({ x: 0, y: 0 })}
+        style={{ transform: `perspective(900px) rotateX(${tilt.x}deg) rotateY(${tilt.y}deg)` }}
+      >
+        <img src={`/agent-portraits/${agent}Portrait.webp`} alt={`${agent} from VALORANT`} />
+        <span className="hero-agent-name">{agent}</span>
       </div>
     </section>
   )

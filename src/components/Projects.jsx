@@ -5,9 +5,9 @@ function ProjectCard({ project }) {
   return (
     <article className="project-card">
       <div className="card-top">
-        <span className="repo-icon">
+        {/* <span className="repo-icon">
           <Icon name={project.icon} size={16} />
-        </span>
+        </span> */}
         <div className="repo-links">
           {project.urls.map((url) => (
             <a
@@ -24,11 +24,11 @@ function ProjectCard({ project }) {
       </div>
       <h3>{project.title}</h3>
       <p>{project.description}</p>
-      <div className="tag-row">
+      {/* <div className="tag-row">
         {project.tags.map((tag) => (
           <span key={tag}>{tag}</span>
         ))}
-      </div>
+      </div> */}
       <div className="repo-meta">
         <span>
           <i style={{ background: project.color }} /> {project.language}

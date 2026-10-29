@@ -4,19 +4,19 @@ import { Icon } from './Icon'
 function SiteCard({ site }) {
   return (
     <article className="site-card">
-      <div className="site-card-top">
+      {/* <div className="site-card-top">
         <span className="site-index">0{sites.indexOf(site) + 1}</span>
         <span className={`site-status site-status-${site.statusColor}`}>
           <i /> {site.status}
         </span>
-      </div>
+      </div> */}
       <h3>{site.name}</h3>
       <p>{site.description}</p>
-      <div className="site-role-list">
+      {/* <div className="site-role-list">
         {site.roles.map((role) => (
           <span key={role}>{role}</span>
         ))}
-      </div>
+      </div> */}
       <a
         className="site-link"
         href={site.url}

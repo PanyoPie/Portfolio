@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tunaa - Portfolio</title>
+  <meta name="description" content="A new creative portfolio is on the horizon. Stay tuned for the launch." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@500;600;700&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Interactive Starfield & Nebula Canvas -->
+  <canvas id="cosmos-canvas" aria-hidden="true"></canvas>
+
+  <!-- Ambient Nebula Glows -->
+  <div class="nebula nebula-1" aria-hidden="true"></div>
+  <div class="nebula nebula-2" aria-hidden="true"></div>
+  <div class="nebula nebula-3" aria-hidden="true"></div>
+
+  <div class="page-wrapper">
+    <!-- Top Bar -->
+    <header class="top-bar">
+    </header>
+
+    <!-- Main Hero -->
+    <main class="hero">
+      <div class="orbit-visual" aria-hidden="true">
+        <div class="orbit-ring ring-outer">
+          <span class="planet planet-1"></span>
+        </div>
+        <div class="orbit-ring ring-inner">
+          <span class="planet planet-2"></span>
+        </div>
+        <div class="core-star"></div>
+      </div>
+
+      <h1 class="headline">
+        Charting a New<br />
+        <span class="gradient-text">Digital Cosmos</span>
+      </h1>
+      <p class="subheadline">
+        Building something worth the wait. New worlds, sharp code, and bold
+        ideas-dropping out of hyperspace soon.
+      </p>
+
+      <!-- Countdown Timer -->
+      <section class="countdown" aria-label="Launch countdown">
+        <div class="time-card">
+          <span class="time-value" id="days">00</span>
+          <span class="time-label mono">DAYS</span>
+        </div>
+        <div class="time-sep" aria-hidden="true">:</div>
+        <div class="time-card">
+          <span class="time-value" id="hours">00</span>
+          <span class="time-label mono">HOURS</span>
+        </div>
+        <div class="time-sep" aria-hidden="true">:</div>
+        <div class="time-card">
+          <span class="time-value" id="minutes">00</span>
+          <span class="time-label mono">MINS</span>
+        </div>
+        <div class="time-sep" aria-hidden="true">:</div>
+        <div class="time-card">
+          <span class="time-value" id="seconds">00</span>
+          <span class="time-label mono">SECS</span>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <p class="copyright mono">
+        &copy; <span id="year"></span> &bull; ALL SYSTEMS NOMINAL
+        <br>
+        Made by <span class="gradient-text"><b>Tunaa Nguyen</b></span>, with full of 💖.
+      </p>
+      <nav class="social-links" aria-label="Social links">
+        <a href="https://github.com/PanyoPie" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+          </svg>
+        </a>
+        <a href="mailto:nguyenductuan11122006@gmail.com" aria-label="Email">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+            <polyline points="22,6 12,13 2,6"></polyline>
+          </svg>
+        </a>
+      </nav>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
